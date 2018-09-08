@@ -1,0 +1,63 @@
+﻿/*LayoutTemple*/
+.layout-temple{
+    background:green;
+    height:94px;
+}
+.layout-temple .col{
+    margin-left:11%;
+}
+.layout-temple .col a img {
+        margin-top: 9.5px;
+}
+.body-layout-temple{
+    margin-top:100px;
+}
+.footer-layout-temple {
+    background: #025215;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footer-layout-temple p,a{
+    height:20px;
+    line-height:62px;
+    color: white;
+}
+/*LayOut-Admin*/
+.layout-admin {
+    background: #006600;
+    margin-top:90px;
+    height:40px;
+}
+.layout-admin .collapse ul {
+        margin-left: 25%;
+}
+.layout-admin .collapse ul.navbar-right {
+    margin-left: 0px;
+}
+.layout-admin .collapse ul li {
+        margin-top: 10px;
+}
+.layout-admin .collapse ul li a {
+        line-height: 3px;   
+}
+.layout-admin .collapse ul.dropdown-menu li a:hover {
+        padding-top:8px;
+}
+.glyphicon-log-in:before {
+    content: "\e161";
+    font-family: 'Glyphicons Halflings';
+}
+.link-a {
+    margin-right: 120px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.link-log-in {
+    top: -6px !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*Container body*/
+.body-content{
+    margin-top: 130px;
+}
