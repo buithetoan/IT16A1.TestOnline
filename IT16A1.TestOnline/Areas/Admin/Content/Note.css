@@ -1,4 +1,18 @@
 ﻿.btn-success {
     height: 40px;
     line-height: 30px;
+    float: left;
+}
+th {
+    background: #025215;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.acction {
+    text-align: center;
+}
+
+.btn {
+    display: inline;
 }

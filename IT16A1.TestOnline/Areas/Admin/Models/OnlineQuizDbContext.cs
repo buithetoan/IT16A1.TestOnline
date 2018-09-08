@@ -8,7 +8,7 @@ namespace IT16A1.TestOnline.Areas.Admin.Models
     public partial class OnlineQuizDbContext : DbContext
     {
         public OnlineQuizDbContext()
-            : base("name=OnlineQuizDbContext")
+            : base("name=OnlineQuizDbContext1")
         {
         }
 
@@ -33,6 +33,7 @@ namespace IT16A1.TestOnline.Areas.Admin.Models
         public virtual DbSet<QuestionModule> QuestionModules { get; set; }
         public virtual DbSet<Registration> Registrations { get; set; }
         public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

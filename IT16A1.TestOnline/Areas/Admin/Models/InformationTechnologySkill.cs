@@ -12,6 +12,7 @@ namespace IT16A1.TestOnline.Areas.Admin.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public InformationTechnologySkill()
         {
+            QuestionModules = new HashSet<QuestionModule>();
             Registrations = new HashSet<Registration>();
         }
 
@@ -19,6 +20,9 @@ namespace IT16A1.TestOnline.Areas.Admin.Models
 
         [StringLength(100)]
         public string Name { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<QuestionModule> QuestionModules { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Registration> Registrations { get; set; }

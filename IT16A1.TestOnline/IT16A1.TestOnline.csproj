@@ -156,7 +156,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\InformationTechnologySkillsController.cs" />
     <Compile Include="Areas\Admin\Controllers\NotesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuestionModulesController.cs" />
     <Compile Include="Areas\Admin\Models\AdvancedExamResult.cs" />
     <Compile Include="Areas\Admin\Models\AdvancedExamResultDetail.cs" />
     <Compile Include="Areas\Admin\Models\AdvancedModuleRegistration.cs" />
@@ -179,10 +181,16 @@
     <Compile Include="Areas\Admin\Models\QuestionModule.cs" />
     <Compile Include="Areas\Admin\Models\Registration.cs" />
     <Compile Include="Areas\Admin\Models\Student.cs" />
+    <Compile Include="Areas\Admin\Models\sysdiagram.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809080828114_intialDb.cs" />
+    <Compile Include="Migrations\201809080828114_intialDb.Designer.cs">
+      <DependentUpon>201809080828114_intialDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -195,7 +203,6 @@
     <Content Include="Areas\Admin\Content\logo2.png" />
     <Content Include="Areas\Admin\Content\Note.css" />
     <Content Include="Areas\Admin\Content\Site.css" />
-    <Content Include="Content\Note.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -223,6 +230,16 @@
     <Content Include="Areas\Admin\Content\bootstrap-theme.min.css.map" />
     <Content Include="Areas\Admin\Content\bootstrap.css.map" />
     <Content Include="Areas\Admin\Content\bootstrap.min.css.map" />
+    <Content Include="Areas\Admin\Views\InformationTechnologySkills\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\InformationTechnologySkills\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\InformationTechnologySkills\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\InformationTechnologySkills\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\InformationTechnologySkills\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QuestionModules\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\QuestionModules\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\QuestionModules\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\QuestionModules\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\QuestionModules\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -265,6 +282,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809080828114_intialDb.resx">
+      <DependentUpon>201809080828114_intialDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
