@@ -4,11 +4,9 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Index</h2>
-
-<p class="create">
-    <button class="btn btn-success">@Html.ActionLink("Create New", "Create")</button>
-</p>
+@Styles.Render("~/Areas/Admin/Content/Note.css")
+<h2>Index Note</h2>
+<p><a class="btn btn-success" id="btn" href="/Admin/Notes/Create">Create New</a></p>
 <table class="table table-hover table-bordered table-striped">
     <tr>
         <th>
