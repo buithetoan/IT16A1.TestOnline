@@ -6,27 +6,29 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.RenderFormat("~/Areas/Admin/Notes/Note.css")
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
+    <!--banner-->
     <div class="navbar navbar-fixed-top layout-temple">
         <div class="row">
             <div class="container-fluid">
                 <div class="col-md-2"></div>
                 <div class="col" style="float:left;">
                     <a href="#">
-                        <img src="~/Content/logo1.png" alt="Alternate Text" />
+                        <img src="~/Content/picture/logo1.png" alt="Alternate Text" />
                     </a>
                 </div>
                 <div class="col" style="float:left;">
                     <a href="#">
-                        <img src="~/Content/logo2.png" alt="Alternate Text" />
+                        <img src="~/Content/picture/logo2.png" alt="Alternate Text" />
                     </a>
                 </div>
                 <div class="col-md-2"></div>
             </div>
         </div>
     </div>
+    <!--Layout-Adm-->
     <nav class="navbar layout-admin navbar-fixed-top">
         <div>
             <div class="navbar-header">
@@ -41,31 +43,70 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administrator <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Note", "Index", "Notes", new { area = "Admin" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Note", "Index", "Note", new { area = "Admin" }, new { @class = "" })</li>
                             <li>@Html.ActionLink("Student", "Index", "Student", new { area = "Admin" }, new { @class = "" })</li>
-                            <li><a href="#">Page 1-3</a></li>
+                            <li>@Html.ActionLink("Faculty", "Index", "Faculty", new { area = "Admin" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Major Class", "Index", "MajorClass", new { area = "Admin" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Registration", "Index", "Registration", new { area = "Admin" }, new { @class = "" })</li>
+                            <!--Dropdow Question-->
+                            <li class="li-question">
+                                <a href="">Question<span class="caret"></span></a>
+                                <ul class="dropdown-question">
+                                    <li>@Html.ActionLink("Management", "Index", "Question", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Classification", "Index", "Question", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Module", "Index", "QuestionModule", new { area = "Admin" }, new { @class = "" })</li>
+                                </ul>
+                            </li>
+                            <!--Dropdow Examination-->
+                            <li class="li-question">
+                                <a href="">Examination <span class="caret"></span></a>
+                                <ul class="dropdown-question">
+                                    <li>@Html.ActionLink("Management", "Index", "Examination", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Module", "Index", "ExaminationModule", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Question", "Index", "ExaminationQuestion", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Examinee", "Index", "Examinee", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Period", "Index", "ExamPeriod", new { area = "Admin" }, new { @class = "" })</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Test Online <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Page 1-1</a></li>
-                            <li><a href="#">Page 1-2</a></li>
-                            <li><a href="#">Page 1-3</a></li>
+                            <!--Dropdow Advanced-->
+                            <li class="li-question">
+                                <a href="">Advanced <span class="caret"></span></a>
+                                <ul class="dropdown-question">
+                                    <li>@Html.ActionLink("Exam Result", "Index", "AdvancedExamResult", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Exam Resul tDetail", "Index", "Question", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Module Registration", "Index", "QuestionModule", new { area = "Admin" }, new { @class = "" })</li>
+                                </ul>
+                            </li>
+                            <!--Dropdow Basic-->
+                            <li class="li-question">
+                                <a href="">Basic <span class="caret"></span></a>
+                                <ul class="dropdown-question">
+                                    <li>@Html.ActionLink("Exam Result", "Index", "BasicExamResult", new { area = "Admin" }, new { @class = "" })</li>
+                                    <li>@Html.ActionLink("Exam Result Detail", "Index", "BasicExamResultDetail", new { area = "Admin" }, new { @class = "" })</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
+                <!--Sigin-->
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#" class="link-a"><span class="glyphicon glyphicon-log-in link-log-in"> Login</span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container body-content body-layouttemple">
+    <!--Body-layout-->
+    <div class="container body-content body-layout-temple">
         @RenderBody()
         <hr />
     </div>
-    <footer class="footer-layout-temple">
+    <!--Footer-->
+    <footer class="footer-layout-temple navbar-fixed-bottom">
         <p class="text-center">©2016 Trung tâm ICT <a href="http://donga.edu.vn" target="_blank">Trường Đại học Đông Á</a></p>
     </footer>
     @Scripts.Render("~/bundles/jquery")

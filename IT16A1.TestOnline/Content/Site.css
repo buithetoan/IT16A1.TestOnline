@@ -1,63 +1,99 @@
 ﻿/*LayoutTemple*/
-.layout-temple{
-    background:green;
-    height:94px;
+.layout-temple {
+    background: green;
+    height: 94px;
 }
-.layout-temple .col{
-    margin-left:11%;
+
+    .layout-temple .col {
+        margin-left: 11%;
+    }
+
+        .layout-temple .col a img {
+            margin-top: 9.5px;
+        }
+
+.body-layout-temple {
+    margin-top: 100px;
 }
-.layout-temple .col a img {
-        margin-top: 9.5px;
-}
-.body-layout-temple{
-    margin-top:100px;
-}
+
 .footer-layout-temple {
     background: #025215;
-    height: 60px;
-    position: absolute;
-    bottom: 0;
+    height: 30px;
     width: 100%;
 }
-.footer-layout-temple p,a{
-    height:20px;
-    line-height:62px;
-    color: white;
-}
+
+    .footer-layout-temple p, a {
+        height: 20px;
+        line-height: 30px;
+        color: white;
+    }
 /*LayOut-Admin*/
 .layout-admin {
     background: #006600;
-    margin-top:90px;
-    height:40px;
+    margin-top: 90px;
+    height: 40px;
 }
-.layout-admin .collapse ul {
-        margin-left: 25%;
-}
-.layout-admin .collapse ul.navbar-right {
-    margin-left: 0px;
-}
-.layout-admin .collapse ul li {
-        margin-top: 10px;
-}
-.layout-admin .collapse ul li a {
-        line-height: 3px;   
-}
-.layout-admin .collapse ul.dropdown-menu li a:hover {
-        padding-top:8px;
-}
+
+    .layout-admin .collapse ul {
+        margin-left: 7%;
+    }
+
+        .layout-admin .collapse ul.navbar-right {
+            margin-left: 0px;
+        }
+
+        .layout-admin .collapse ul li {
+            margin-top: 10px;
+        }
+
+            .layout-admin .collapse ul li a {
+                line-height: 3px;
+            }
+
+        .layout-admin .collapse ul.dropdown-menu li a:hover {
+            padding-top: 0px;
+            background: none;
+        }
+
 .glyphicon-log-in:before {
     content: "\e161";
     font-family: 'Glyphicons Halflings';
 }
+
 .link-a {
     margin-right: 120px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .link-log-in {
     top: -6px !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/*Container body*/
-.body-content{
-    margin-top: 130px;
+
+ul.dropdown-question {
+    display: none;
+    margin-top: -13px;
+    padding-left: 63px;
+    width: 230px;
+    height: auto;
+    list-style-type: none;
+    color: black;
+}
+
+    ul.dropdown-question li {
+        text-decoration: none;
+    }
+
+        ul.dropdown-question li a {
+            color: black;
+            text-decoration: none;
+        }
+
+li.li-question:hover ul {
+    display: block;
+    color: black;
+}
+
+li.li-question ul li a:hover {
+    color: #6666ff;
 }
